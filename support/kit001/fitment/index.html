@@ -8,24 +8,291 @@
 
 <title>GREXVAN GV-KIT-001 Vehicle Fitment</title>
 
+<style>
+
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.product-name {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+
+/* Cards */
+
+.info-card {
+    border: 1px solid var(--light-gray);
+    padding: 24px;
+    margin-bottom: 14px;
+    background: var(--white);
+}
+
+.info-card h3 {
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+.info-card p {
+    margin: 0 0 12px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Fitment Table */
+
+.fitment-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.fitment-table th,
+.fitment-table td {
+    border: 1px solid var(--light-gray);
+    padding: 14px 12px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.fitment-table th {
+    background: #fafafa;
+    font-weight: 700;
+}
+
+
+/* Notice */
+
+.notice {
+    border-left: 3px solid var(--black);
+    padding: 18px 20px;
+    margin: 25px 0;
+    background: #fafafa;
+}
+
+.notice p {
+    margin: 0 0 8px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.notice p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Links */
+
+.support-link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.support-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .fitment-table {
+        font-size: 12px;
+    }
+
+    .fitment-table th,
+    .fitment-table td {
+        padding: 10px 8px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
-<h1>GREXVAN</h1>
 
-<h2>GV-KIT-001</h2>
+<div class="container">
 
-<h3>Mazda CX-5 Cabin + Engine Air Filter Kit · Vehicle Fitment</h3>
 
+<header class="header">
+
+<div class="brand">
+GREXVAN
+</div>
+
+<div class="page-label">
+FITMENT
+</div>
+
+</header>
+
+
+
+<main class="main">
+
+
+<div class="product-label">
+VEHICLE COMPATIBILITY
+</div>
+
+<h1>
+GV-KIT-001
+</h1>
+
+<div class="product-name">
+Mazda CX-5 Cabin + Engine Air Filter Kit
+</div>
+
+
+
+<div class="info-card">
+
+<h3>
+Vehicle Fitment
+</h3>
 
 <p>
-Check vehicle compatibility before installation.
+Check vehicle compatibility before purchase
+or installation.
 </p>
 
-
-<table border="1">
+<table class="fitment-table">
 
 <tr>
 <th>Make</th>
@@ -34,94 +301,120 @@ Check vehicle compatibility before installation.
 <th>Application</th>
 </tr>
 
-
 <tr>
 <td>Mazda</td>
 <td>CX-5</td>
 <td>2013–2024</td>
-<td>Applicable CX-5 configurations</td>
+<td>
+Applicable CX-5 configurations
+</td>
 </tr>
-
 
 </table>
 
+</div>
 
-<h3>Kit Components</h3>
 
+
+<div class="info-card">
+
+<h3>
+Kit Components
+</h3>
 
 <p>
-
 <strong>Cabin Air Filter</strong><br>
-
 Product No.: GV-CF-001<br>
-
 OE Reference: KD45-61-J6X series
-
 </p>
 
-
 <p>
-
 <strong>Engine Air Filter</strong><br>
-
 Product No.: GV-EF-001<br>
-
 OE Reference: PE07-13-3A0A<br>
-
 Previous / Superseded Reference: PE07-13-3A0
-
 </p>
 
+</div>
 
-<h3>Important Exclusion</h3>
 
+
+<div class="notice">
 
 <p>
+<strong>Important Exclusion</strong>
+</p>
 
+<p>
 GV-KIT-001 is not applicable to Mazda CX-5
 2.5L Skyactiv-G Turbo models using OE reference
 PY8W-13-3A0.
-
 </p>
 
+</div>
 
-<h3>Check Individual Product Fitment</h3>
 
+
+<div class="info-card">
+
+<h3>
+Check Individual Product Fitment
+</h3>
 
 <p>
-<a href="/support/cf001/fitment/">
+<a class="support-link" href="/support/cf001/fitment/">
 View GV-CF-001 Fitment →
 </a>
 </p>
 
-
 <p>
-<a href="/support/ef001/fitment/">
+<a class="support-link" href="/support/ef001/fitment/">
 View GV-EF-001 Fitment →
 </a>
 </p>
 
+</div>
+
+
+
+<div class="notice">
 
 <p>
-
-<strong>Important:</strong>
-
-Vehicle fitment depends on model year,
-engine configuration and applicable OE reference.
-
-Please verify the vehicle configuration before
-purchase or installation.
-
+<strong>Fitment Verification</strong>
 </p>
 
-
 <p>
+Vehicle fitment depends on model year,
+engine configuration, and applicable OE reference.
+Please verify the vehicle configuration before
+purchase or installation.
+</p>
+
+</div>
+
+
+
+<div class="navigation">
 
 <a href="/support/kit001/">
 ← Back to GV-KIT-001 Support
 </a>
 
-</p>
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+GREXVAN · Automotive Maintenance Parts
+
+</footer>
+
+
+</div>
 
 
 </body>
