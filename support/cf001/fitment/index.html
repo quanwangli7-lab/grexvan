@@ -8,66 +8,402 @@
 
 <title>GREXVAN GV-CF-001 Vehicle Fitment</title>
 
+<style>
+
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.product-name {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* Fitment Table */
+
+.fitment-section {
+    margin-top: 30px;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 18px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+th,
+td {
+    border: 1px solid var(--light-gray);
+    padding: 16px 15px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+th {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #f2f2f2;
+}
+
+td {
+    font-size: 14px;
+}
+
+
+/* Reference Cards */
+
+.references {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.reference-card {
+    border: 1px solid var(--light-gray);
+    padding: 22px;
+    background: var(--white);
+}
+
+.reference-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.reference-value {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* Important */
+
+.notice {
+    margin-top: 30px;
+    border-left: 3px solid var(--black);
+    padding: 18px 20px;
+    background: #fafafa;
+}
+
+.notice p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Back */
+
+.back {
+    margin-top: 35px;
+}
+
+.back a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .header {
+        padding-bottom: 20px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .references {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
-<h1>GREXVAN</h1>
 
-<h2>GV-CF-001</h2>
-
-<h3>Cabin Air Filter · Vehicle Fitment</h3>
+<div class="container">
 
 
-<p>
+<header class="header">
+
+<div class="brand">
+GREXVAN
+</div>
+
+<div class="page-label">
+FITMENT
+</div>
+
+</header>
+
+
+
+<main class="main">
+
+
+<div class="product-label">
+PRODUCT
+</div>
+
+<h1>
+GV-CF-001
+</h1>
+
+<div class="product-name">
+Cabin Air Filter · Vehicle Fitment
+</div>
+
+<p class="intro">
 Check vehicle compatibility before installation.
 </p>
 
 
-<table border="1">
+
+<section class="fitment-section">
+
+<div class="section-label">
+VEHICLE APPLICATION
+</div>
+
+
+<div class="table-wrapper">
+
+<table>
 
 <tr>
+
 <th>Make</th>
 <th>Model</th>
 <th>Year</th>
 <th>Application</th>
+
 </tr>
 
 
 <tr>
-<td>Mazda</td>
-<td>CX-5</td>
-<td>2013–2024</td>
-<td>Applicable CX-5 configurations using OE reference KD45-61-J6X series</td>
-</tr>
 
+<td>Mazda</td>
+
+<td>CX-5</td>
+
+<td>2013–2024</td>
+
+<td>
+Applicable CX-5 configurations using OE reference
+KD45-61-J6X series
+</td>
+
+</tr>
 
 </table>
 
+</div>
+
+</section>
+
+
+
+<section class="references">
+
+<div class="reference-card">
+
+<div class="reference-label">
+OE REFERENCE
+</div>
+
+<div class="reference-value">
+KD45-61-J6X
+</div>
+
+</div>
+
+
+<div class="reference-card">
+
+<div class="reference-label">
+CURRENT OEM REPLACEMENT REFERENCE
+</div>
+
+<div class="reference-value">
+KD45-61-J6X-9U
+</div>
+
+</div>
+
+</section>
+
+
+
+<div class="notice">
 
 <p>
-
-OE Reference:
-<strong>KD45-61-J6X</strong>
-
-</p>
-
-
-<p>
-
-Current OEM Replacement Reference:
-<strong>KD45-61-J6X-9U</strong>
-
-</p>
-
-
-<p>
-
+<strong>Important:</strong>
 For product-specific compatibility, always verify the vehicle
 configuration and applicable OE reference before purchase or installation.
-
 </p>
+
+</div>
+
+
+
+<div class="back">
+
+<a href="/support/cf001/">
+← Back to GV-CF-001 Support
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+GREXVAN · Automotive Maintenance Parts
+
+</footer>
+
+
+</div>
 
 
 </body>
