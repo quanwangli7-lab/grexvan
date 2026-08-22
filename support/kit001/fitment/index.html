@@ -23,19 +23,30 @@ body {
     padding: 70px 24px;
 }
 
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 55px;
+}
+
 .brand {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 45px;
 }
 
 .label {
     font-size: 13px;
     letter-spacing: 1.5px;
     color: #666;
-    margin-bottom: 12px;
 }
+
+/* Main */
 
 h1 {
     font-size: 40px;
@@ -48,24 +59,75 @@ h2 {
     margin: 0 0 40px;
 }
 
-.card {
+/* Sections */
+
+.section {
     border-top: 1px solid #ddd;
     padding: 28px 0;
 }
 
-.card h3 {
+.section h3 {
     margin-top: 0;
     font-size: 20px;
 }
 
-.card p {
+.section p {
     line-height: 1.7;
 }
 
+/* Product Grid */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.product {
+    padding-top: 5px;
+}
+
+.product-no {
+    color: #b3261e;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.product p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Notice */
+
 .notice {
-    border-left: 3px solid #111;
+    border-left: 3px solid #b3261e;
     padding-left: 18px;
     margin: 30px 0;
+}
+
+.notice h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.notice p {
+    line-height: 1.7;
+}
+
+/* Links */
+
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
 }
 
 a {
@@ -73,12 +135,39 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
 .footer {
     margin-top: 55px;
     padding-top: 25px;
     border-top: 1px solid #ddd;
     font-size: 13px;
     color: #666;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .product-grid,
+    .link-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
 }
 
 </style>
@@ -91,29 +180,38 @@ a {
 <div class="container">
 
 
+<!-- Header -->
+
+<div class="header">
+
 <div class="brand">
 GREXVAN
 </div>
-
 
 <div class="label">
 VEHICLE FITMENT
 </div>
 
+</div>
+
+
+<!-- Product Title -->
 
 <h1>GV-KIT-001</h1>
 
-<h2>Mazda CX-5 Cabin + Engine Air Filter Kit</h2>
+<h2>
+Mazda CX-5 Cabin + Engine Air Filter Kit
+</h2>
 
 
-<div class="card">
+<!-- Vehicle Compatibility -->
+
+<div class="section">
 
 <h3>Vehicle Compatibility</h3>
 
 <p>
-
 Check vehicle compatibility before installation.
-
 </p>
 
 <p>
@@ -125,83 +223,122 @@ Check vehicle compatibility before installation.
 </p>
 
 <p>
-
-Applicable CX-5 configurations based on the
-cabin and engine air filter references listed below.
-
+Applicable CX-5 configurations based on the cabin
+and engine air filter references listed below.
 </p>
 
 </div>
 
 
-<div class="card">
+<!-- Kit Components -->
+
+<div class="section">
 
 <h3>Kit Components</h3>
 
+
+<div class="product-grid">
+
+
+<div class="product">
+
+<div class="product-no">
+GV-CF-001
+</div>
+
+<div class="product-name">
+Cabin Air Filter
+</div>
+
 <p>
-
-<strong>GV-CF-001</strong><br>
-Cabin Air Filter<br>
-OE Reference: <strong>KD45-61-J6X series</strong>
-
-</p>
-
-<p>
-
-<strong>GV-EF-001</strong><br>
-Engine Air Filter<br>
-OE Reference: <strong>PE07-13-3A0A</strong><br>
-Previous / Superseded Reference:
-<strong>PE07-13-3A0</strong>
-
+<strong>OE Reference:</strong><br>
+KD45-61-J6X series
 </p>
 
 </div>
 
 
-<div class="notice">
+<div class="product">
+
+<div class="product-no">
+GV-EF-001
+</div>
+
+<div class="product-name">
+Engine Air Filter
+</div>
 
 <p>
-
-<strong>Important Exclusion:</strong>
-
+<strong>OE Reference:</strong><br>
+PE07-13-3A0A
 </p>
+
+<p>
+<strong>Previous / Superseded Reference:</strong><br>
+PE07-13-3A0
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- Important Exclusion -->
+
+<div class="notice">
+
+<h3>Important Exclusion</h3>
 
 <p>
 
 GV-KIT-001 is not applicable to Mazda CX-5
 2.5L Skyactiv-G Turbo models using OE reference
-<strong>PY8W-13-3A0</strong>.
+PY8W-13-3A0.
 
 </p>
 
 </div>
 
 
-<div class="card">
+<!-- Individual Fitment -->
+
+<div class="section">
 
 <h3>Check Individual Product Fitment</h3>
 
-<p>
+
+<div class="link-grid">
+
+
+<div>
 
 <a href="/support/cf001/fitment/">
 View GV-CF-001 Fitment →
 </a>
 
-</p>
+</div>
 
-<p>
+
+<div>
 
 <a href="/support/ef001/fitment/">
 View GV-EF-001 Fitment →
 </a>
 
-</p>
+</div>
+
+
+</div>
 
 </div>
 
 
-<div class="card">
+<!-- Fitment Verification -->
+
+<div class="section">
 
 <h3>Fitment Verification</h3>
 
@@ -230,6 +367,8 @@ purchase or installation.
 
 </p>
 
+
+<!-- Footer -->
 
 <div class="footer">
 
