@@ -10,77 +10,194 @@
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 80px 24px;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
 }
 
 .brand {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 50px;
 }
 
-.label {
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: #666;
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
     margin-bottom: 12px;
 }
 
 h1 {
     font-size: 42px;
-    margin: 0 0 12px;
+    line-height: 1.1;
+    margin: 0 0 10px;
 }
 
-h2 {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 0 40px;
+.product-name {
+    font-size: 21px;
+    margin-bottom: 35px;
 }
 
-.video {
+
+/* Video */
+
+.video-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin-bottom: 45px;
+    background: #000000;
+    overflow: hidden;
 }
 
-.video iframe {
+.video-wrapper iframe {
     width: 100%;
     height: 100%;
     border: 0;
 }
 
-.info {
-    border-top: 1px solid #ddd;
+
+/* Information */
+
+.info-section {
+    margin-top: 35px;
+    border-top: 1px solid var(--light-gray);
     padding-top: 30px;
 }
 
-.info p {
-    line-height: 1.7;
+.info-block {
+    margin-bottom: 25px;
 }
+
+.info-block:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.info-block p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
 
 .footer {
-    margin-top: 60px;
+    margin-top: 55px;
     padding-top: 25px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-    color: #666;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
 }
 
-a {
-    color: #111;
-    text-decoration: none;
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .header {
+        padding-bottom: 20px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
 
 </style>
@@ -90,22 +207,42 @@ a {
 
 <body>
 
+
 <div class="container">
+
+
+<header class="header">
 
 <div class="brand">
 GREXVAN
 </div>
 
-<div class="label">
+<div class="page-label">
 INSTALLATION VIDEO
 </div>
 
-<h1>GV-CF-001</h1>
-
-<h2>Cabin Air Filter · Mazda CX-5</h2>
+</header>
 
 
-<div class="video">
+
+<main class="main">
+
+
+<div class="product-label">
+PRODUCT
+</div>
+
+<h1>
+GV-CF-001
+</h1>
+
+<div class="product-name">
+Cabin Air Filter · Mazda CX-5
+</div>
+
+
+
+<div class="video-wrapper">
 
 <iframe
 src="https://www.youtube.com/embed/50_ivBdLKi0"
@@ -117,9 +254,13 @@ allowfullscreen>
 </div>
 
 
-<div class="info">
 
-<div class="label">
+<section class="info-section">
+
+
+<div class="info-block">
+
+<div class="info-label">
 PRODUCT
 </div>
 
@@ -128,8 +269,13 @@ PRODUCT
 Cabin Air Filter
 </p>
 
+</div>
 
-<div class="label">
+
+
+<div class="info-block">
+
+<div class="info-label">
 VEHICLE
 </div>
 
@@ -137,25 +283,54 @@ VEHICLE
 Mazda CX-5
 </p>
 
+</div>
 
-<div class="label">
+
+
+<div class="info-block">
+
+<div class="info-label">
 INSTALLATION
 </div>
 
 <p>
-Follow the video guide above for the installation of the GREXVAN GV-CF-001 Cabin Air Filter.
+Follow the video guide above for the installation of the
+GREXVAN GV-CF-001 Cabin Air Filter.
 </p>
 
 </div>
 
 
-<div class="footer">
+</section>
+
+
+
+<div class="navigation">
+
+<a href="/support/cf001/">
+← Back to GV-CF-001 Support
+</a>
+
+<a href="/support/cf001/installation/">
+Installation Guide →
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
 
 GREXVAN · Automotive Maintenance Parts
 
-</div>
+</footer>
+
 
 </div>
+
 
 </body>
 
