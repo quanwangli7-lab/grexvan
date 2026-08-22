@@ -10,75 +10,244 @@
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 70px 24px;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
 }
 
 .brand {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 45px;
 }
 
-.label {
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: #666;
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
     margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 40px;
-    margin: 0 0 12px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 500;
-    margin: 0 0 40px;
+    margin: 0 0 35px;
 }
 
-.card {
-    border-top: 1px solid #ddd;
+
+/* Sections */
+
+.section {
+    border-top: 1px solid var(--light-gray);
     padding: 28px 0;
 }
 
-.card h3 {
-    margin-top: 0;
-    font-size: 20px;
+.section h3 {
+    margin: 0 0 18px;
+    font-size: 19px;
 }
 
-.card p {
+.section p {
+    line-height: 1.7;
+    margin: 0 0 16px;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Warranty */
+
+.email {
+    font-size: 16px;
+}
+
+.email a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.email a:hover {
+    text-decoration: underline;
+}
+
+
+/* Components */
+
+.component-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.component {
+    border: 1px solid var(--light-gray);
+    padding: 22px;
+}
+
+.component-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.component h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.component p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Notice */
+
+.notice {
+    border-left: 3px solid var(--black);
+    padding: 18px 20px;
+    margin-top: 30px;
+    background: #fafafa;
+}
+
+.notice strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.notice p {
+    margin: 0;
     line-height: 1.7;
 }
 
-.notice {
-    border-left: 3px solid #111;
-    padding-left: 18px;
-    margin: 30px 0;
+
+/* Links */
+
+.link {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
 }
 
-a {
-    color: #111;
-    text-decoration: none;
+.link:hover {
+    text-decoration: underline;
 }
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
 
 .footer {
     margin-top: 55px;
     padding-top: 25px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-    color: #666;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 </style>
@@ -88,27 +257,46 @@ a {
 
 <body>
 
+
 <div class="container">
 
+
+<header class="header">
 
 <div class="brand">
 GREXVAN
 </div>
 
-
-<div class="label">
+<div class="page-label">
 WARRANTY
 </div>
 
-
-<h1>GV-KIT-001</h1>
-
-<h2>Mazda CX-5 Cabin + Engine Air Filter Kit</h2>
+</header>
 
 
-<div class="card">
 
-<h3>Warranty Registration</h3>
+<main class="main">
+
+
+<div class="product-label">
+PRODUCT
+</div>
+
+<h1>
+GV-KIT-001
+</h1>
+
+<h2>
+Mazda CX-5 Cabin + Engine Air Filter Kit
+</h2>
+
+
+
+<section class="section">
+
+<h3>
+Warranty Registration
+</h3>
 
 <p>
 
@@ -124,24 +312,21 @@ please contact:
 
 </p>
 
-<p>
+<p class="email">
 
 <a href="mailto:support@grexvan.com">
-<strong>support@grexvan.com</strong>
+support@grexvan.com
 </a>
 
 </p>
 
-</div>
+</section>
+
 
 
 <div class="notice">
 
-<p>
-
 <strong>When contacting support</strong>
-
-</p>
 
 <p>
 
@@ -154,30 +339,61 @@ and purchase information when applicable.
 </div>
 
 
-<div class="card">
 
-<h3>Kit Components</h3>
+<section class="section">
+
+<h3>
+Kit Components
+</h3>
+
+
+<div class="component-grid">
+
+
+<div class="component">
+
+<div class="component-label">
+CABIN AIR FILTER
+</div>
+
+<h4>
+GV-CF-001
+</h4>
 
 <p>
-
-<strong>GV-CF-001</strong><br>
 Cabin Air Filter
-
-</p>
-
-<p>
-
-<strong>GV-EF-001</strong><br>
-Engine Air Filter
-
 </p>
 
 </div>
 
 
-<div class="card">
 
-<h3>Important</h3>
+<div class="component">
+
+<div class="component-label">
+ENGINE AIR FILTER
+</div>
+
+<h4>
+GV-EF-001
+</h4>
+
+<p>
+Engine Air Filter
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<div class="notice">
+
+<strong>Important</strong>
 
 <p>
 
@@ -193,29 +409,47 @@ details for warranty support.
 </div>
 
 
-<div class="card">
 
-<h3>Vehicle Fitment</h3>
+<section class="section">
+
+<h3>
+Vehicle Fitment
+</h3>
 
 <p>
 
-<a href="/support/kit001/fitment/">
+<a class="link" href="/support/kit001/fitment/">
 Check GV-KIT-001 Vehicle Fitment →
 </a>
 
 </p>
 
+</section>
+
+
+
+<div class="navigation">
+
+<a href="/support/kit001/">
+← Back to GV-KIT-001 Support
+</a>
+
 </div>
 
 
-<div class="footer">
+</main>
+
+
+
+<footer class="footer">
 
 GREXVAN · Automotive Maintenance Parts
 
-</div>
+</footer>
 
 
 </div>
+
 
 </body>
 
