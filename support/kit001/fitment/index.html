@@ -6,226 +6,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GREXVAN GV-KIT-001 Support</title>
+<title>GREXVAN GV-KIT-001 Vehicle Fitment</title>
 
 <style>
-
-:root {
-    --black: #111111;
-    --gray: #666666;
-    --light-gray: #e8e8e8;
-    --background: #f7f7f7;
-    --white: #ffffff;
-    --red: #b32025;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--black);
-    background: var(--background);
+    color: #111;
+    background: #fff;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px 20px 60px;
-}
-
-
-/* Header */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 25px;
-    border-bottom: 2px solid var(--black);
+    padding: 70px 24px;
 }
 
 .brand {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 45px;
 }
 
-.page-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: var(--gray);
-}
-
-
-/* Main */
-
-.main {
-    background: var(--white);
-    margin-top: 25px;
-    padding: 45px 35px;
-    border: 1px solid var(--light-gray);
-}
-
-.product-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: var(--gray);
+.label {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #666;
     margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 42px;
-    line-height: 1.1;
-    margin: 0 0 10px;
+    font-size: 40px;
+    margin: 0 0 12px;
 }
 
-.product-name {
-    font-size: 21px;
-    margin-bottom: 35px;
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 40px;
 }
 
-.intro {
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-
-/* Components */
-
-.section {
-    border-top: 1px solid var(--light-gray);
+.card {
+    border-top: 1px solid #ddd;
     padding: 28px 0;
 }
 
-.section h3 {
-    margin: 0 0 18px;
-    font-size: 19px;
+.card h3 {
+    margin-top: 0;
+    font-size: 20px;
 }
 
-.component-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+.card p {
+    line-height: 1.7;
 }
 
-.component {
-    border: 1px solid var(--light-gray);
-    padding: 22px;
+.notice {
+    border-left: 3px solid #111;
+    padding-left: 18px;
+    margin: 30px 0;
 }
 
-.component-label {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: var(--red);
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.component h4 {
-    margin: 0 0 8px;
-    font-size: 18px;
-}
-
-.component p {
-    margin: 0 0 14px;
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-.component a {
-    color: var(--black);
+a {
+    color: #111;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
 }
-
-.component a:hover {
-    text-decoration: underline;
-}
-
-
-/* Support Links */
-
-.support-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-.support-link {
-    display: block;
-    padding: 17px 18px;
-    border: 1px solid var(--light-gray);
-    color: var(--black);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.support-link:hover {
-    border-color: var(--black);
-}
-
-
-/* Navigation */
-
-.navigation {
-    margin-top: 35px;
-}
-
-.navigation a {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.navigation a:hover {
-    text-decoration: underline;
-}
-
-
-/* Footer */
 
 .footer {
     margin-top: 55px;
     padding-top: 25px;
-    border-top: 1px solid var(--light-gray);
-    font-size: 12px;
-    color: var(--gray);
-    letter-spacing: 0.5px;
-}
-
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .container {
-        padding: 20px 15px 45px;
-    }
-
-    .main {
-        padding: 30px 22px;
-    }
-
-    h1 {
-        font-size: 34px;
-    }
-
-    .product-name {
-        font-size: 19px;
-    }
-
-    .component-grid,
-    .support-grid {
-        grid-template-columns: 1fr;
-    }
-
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+    color: #666;
 }
 
 </style>
@@ -235,191 +88,156 @@ h1 {
 
 <body>
 
-
 <div class="container">
 
-
-<header class="header">
 
 <div class="brand">
 GREXVAN
 </div>
 
-<div class="page-label">
-SUPPORT
-</div>
 
-</header>
-
-
-
-<main class="main">
-
-
-<div class="product-label">
-PRODUCT
-</div>
-
-<h1>
-GV-KIT-001
-</h1>
-
-<div class="product-name">
-Mazda CX-5 Cabin + Engine Air Filter Kit
+<div class="label">
+VEHICLE FITMENT
 </div>
 
 
-<p class="intro">
+<h1>GV-KIT-001</h1>
 
-This kit includes one cabin air filter and one engine air filter
-for applicable Mazda CX-5 vehicles.
-
-</p>
+<h2>Mazda CX-5 Cabin + Engine Air Filter Kit</h2>
 
 
+<div class="card">
 
-<section class="section">
-
-<h3>
-Included Products
-</h3>
-
-
-<div class="component-grid">
-
-
-<div class="component">
-
-<div class="component-label">
-CABIN AIR FILTER
-</div>
-
-<h4>
-GV-CF-001
-</h4>
+<h3>Vehicle Compatibility</h3>
 
 <p>
-Cabin Air Filter
+
+Check vehicle compatibility before installation.
+
 </p>
-
-<a href="/support/cf001/">
-View GV-CF-001 Support →
-</a>
-
-</div>
-
-
-
-<div class="component">
-
-<div class="component-label">
-ENGINE AIR FILTER
-</div>
-
-<h4>
-GV-EF-001
-</h4>
 
 <p>
-Engine Air Filter
+
+<strong>Make:</strong> Mazda<br>
+<strong>Model:</strong> CX-5<br>
+<strong>Year:</strong> 2013–2024
+
 </p>
 
-<a href="/support/ef001/">
-View GV-EF-001 Support →
-</a>
+<p>
+
+Applicable CX-5 configurations using the applicable
+cabin and engine air filter references listed below.
+
+</p>
 
 </div>
 
 
-</div>
+<div class="card">
 
-</section>
+<h3>Kit Components</h3>
 
+<p>
 
+<strong>GV-CF-001</strong><br>
+Cabin Air Filter<br>
+OE Reference: <strong>KD45-61-J6X series</strong>
 
-<section class="section">
+</p>
 
-<h3>
-Kit Support
-</h3>
+<p>
 
+<strong>GV-EF-001</strong><br>
+Engine Air Filter<br>
+OE Reference: <strong>PE07-13-3A0A</strong><br>
+Previous / Superseded Reference: <strong>PE07-13-3A0</strong>
 
-<div class="support-grid">
-
-
-<a
-class="support-link"
-href="/support/kit001/fitment/">
-
-Vehicle Fitment →
-
-</a>
-
-
-<a
-class="support-link"
-href="/support/kit001/installation/">
-
-Installation Guide →
-
-</a>
-
-
-<a
-class="support-link"
-href="/support/kit001/video/">
-
-Installation Video →
-
-</a>
-
-
-<a
-class="support-link"
-href="/support/kit001/warranty/">
-
-Warranty Registration →
-
-</a>
-
-
-<a
-class="support-link"
-href="/support/kit001/contact/">
-
-Contact Support →
-
-</a>
-
-
-</div>
-
-</section>
-
-
-
-<div class="navigation">
-
-<a href="/support/">
-← Back to GREXVAN Support
-</a>
+</p>
 
 </div>
 
 
-</main>
+<div class="notice">
+
+<p>
+
+<strong>Important Exclusion:</strong>
+
+</p>
+
+<p>
+
+GV-KIT-001 is not applicable to Mazda CX-5
+2.5L Skyactiv-G Turbo models using OE reference
+PY8W-13-3A0.
+
+</p>
+
+</div>
 
 
+<div class="card">
 
-<footer class="footer">
+<h3>Check Individual Product Fitment</h3>
+
+<p>
+
+<a href="/support/cf001/fitment/">
+View GV-CF-001 Fitment →
+</a>
+
+</p>
+
+<p>
+
+<a href="/support/ef001/fitment/">
+View GV-EF-001 Fitment →
+</a>
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Fitment Verification</h3>
+
+<p>
+
+Vehicle fitment depends on model year,
+engine configuration, and applicable OE reference.
+
+</p>
+
+<p>
+
+Please verify the vehicle configuration before
+purchase or installation.
+
+</p>
+
+</div>
+
+
+<p>
+
+<a href="/support/kit001/">
+← Back to GV-KIT-001 Support
+</a>
+
+</p>
+
+
+<div class="footer">
 
 GREXVAN · Automotive Maintenance Parts
 
-</footer>
+</div>
 
 
 </div>
-
 
 </body>
 
