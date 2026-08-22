@@ -10,75 +10,207 @@
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 70px 24px;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
 }
 
 .brand {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 45px;
 }
 
-.label {
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: #666;
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
     margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 40px;
-    margin: 0 0 12px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
 }
 
-h2 {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 0 40px;
+.product-name {
+    font-size: 21px;
+    margin-bottom: 35px;
 }
+
+
+/* Cards */
 
 .card {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--light-gray);
     padding: 28px 0;
 }
 
 .card h3 {
-    margin-top: 0;
-    font-size: 20px;
+    margin: 0 0 16px;
+    font-size: 19px;
 }
 
 .card p {
+    margin: 0 0 14px;
     line-height: 1.7;
+    font-size: 14px;
 }
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Support Email */
+
+.email-link {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 12px 18px;
+    border: 1px solid var(--black);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.email-link:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+
+/* Notice */
 
 .notice {
-    border-left: 3px solid #111;
-    padding-left: 18px;
-    margin: 30px 0;
+    border-left: 3px solid var(--black);
+    padding: 20px;
+    margin: 28px 0;
+    background: #fafafa;
 }
 
-a {
-    color: #111;
-    text-decoration: none;
+.notice-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
 }
+
+.notice p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
 
 .footer {
     margin-top: 55px;
     padding-top: 25px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-    color: #666;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
 }
 
 </style>
@@ -88,27 +220,46 @@ a {
 
 <body>
 
+
 <div class="container">
 
+
+<header class="header">
 
 <div class="brand">
 GREXVAN
 </div>
 
-
-<div class="label">
+<div class="page-label">
 WARRANTY
 </div>
 
+</header>
 
-<h1>GV-EF-001</h1>
 
-<h2>Engine Air Filter</h2>
+
+<main class="main">
+
+
+<div class="product-label">
+PRODUCT
+</div>
+
+<h1>
+GV-EF-001
+</h1>
+
+<div class="product-name">
+Engine Air Filter
+</div>
+
 
 
 <div class="card">
 
-<h3>Warranty Registration</h3>
+<h3>
+Warranty Registration
+</h3>
 
 <p>
 
@@ -126,8 +277,12 @@ please contact:
 
 <p>
 
-<a href="mailto:support@grexvan.com">
-<strong>support@grexvan.com</strong>
+<a
+class="email-link"
+href="mailto:support@grexvan.com">
+
+support@grexvan.com
+
 </a>
 
 </p>
@@ -135,13 +290,12 @@ please contact:
 </div>
 
 
+
 <div class="notice">
 
-<p>
-
-<strong>When contacting support</strong>
-
-</p>
+<div class="notice-label">
+WHEN CONTACTING SUPPORT
+</div>
 
 <p>
 
@@ -154,9 +308,12 @@ and purchase information when applicable.
 </div>
 
 
+
 <div class="card">
 
-<h3>Product Information</h3>
+<h3>
+Product Information
+</h3>
 
 <p>
 
@@ -168,14 +325,21 @@ Product: Engine Air Filter
 </div>
 
 
+
 <div class="card">
 
-<h3>Vehicle Fitment</h3>
+<h3>
+Vehicle Fitment
+</h3>
 
 <p>
 
-<a href="/support/ef001/fitment/">
+<a
+class="email-link"
+href="/support/ef001/fitment/">
+
 Check GV-EF-001 Vehicle Fitment →
+
 </a>
 
 </p>
@@ -183,14 +347,33 @@ Check GV-EF-001 Vehicle Fitment →
 </div>
 
 
-<div class="footer">
+
+<div class="navigation">
+
+<a href="/support/ef001/">
+← Back to GV-EF-001 Support
+</a>
+
+<a href="/support/ef001/contact/">
+Contact Support →
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
 
 GREXVAN · Automotive Maintenance Parts
 
-</div>
+</footer>
 
 
 </div>
+
 
 </body>
 
