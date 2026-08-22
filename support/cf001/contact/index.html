@@ -10,75 +10,260 @@
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 70px 24px;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
 }
 
 .brand {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 45px;
 }
 
-.label {
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: #666;
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
     margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.product-name {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+
+/* Contact Card */
+
+.contact-card {
+    border: 1px solid var(--light-gray);
+    padding: 28px 24px;
+    margin-bottom: 14px;
+    background: var(--white);
+}
+
+.action-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
     margin: 0 0 12px;
+    font-size: 18px;
 }
 
-h2 {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 0 40px;
-}
-
-.card {
-    border-top: 1px solid #ddd;
-    padding: 28px 0;
-}
-
-.card h3 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-.card p {
+.contact-card p {
+    margin: 0 0 12px;
     line-height: 1.7;
+    font-size: 14px;
 }
+
+.contact-card p:last-of-type {
+    margin-bottom: 18px;
+}
+
+.email-link {
+    display: inline-block;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Notice */
 
 .notice {
-    border-left: 3px solid #111;
-    padding-left: 18px;
-    margin: 30px 0;
+    border-left: 3px solid var(--black);
+    padding: 18px 20px;
+    margin: 25px 0;
+    background: #fafafa;
 }
 
-a {
-    color: #111;
-    text-decoration: none;
+.notice p {
+    margin: 0 0 8px;
+    line-height: 1.7;
+    font-size: 14px;
 }
+
+.notice p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Information */
+
+.info-card {
+    border: 1px solid var(--light-gray);
+    padding: 24px;
+    margin-bottom: 14px;
+    background: var(--white);
+}
+
+.info-card h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+}
+
+.info-card p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Related Support */
+
+.support-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.support-link {
+    display: block;
+    border: 1px solid var(--light-gray);
+    padding: 18px;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--white);
+}
+
+.support-link:hover {
+    border-color: var(--black);
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
 
 .footer {
     margin-top: 55px;
     padding-top: 25px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-    color: #666;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .header {
+        padding-bottom: 20px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .support-links {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
 
 </style>
@@ -88,127 +273,153 @@ a {
 
 <body>
 
+
 <div class="container">
 
+
+<header class="header">
 
 <div class="brand">
 GREXVAN
 </div>
 
-
-<div class="label">
+<div class="page-label">
 SUPPORT
 </div>
 
-
-<h1>GV-CF-001</h1>
-
-<h2>Cabin Air Filter</h2>
+</header>
 
 
-<div class="card">
 
-<h3>Contact GREXVAN Support</h3>
+<main class="main">
+
+
+<div class="product-label">
+PRODUCT
+</div>
+
+<h1>
+GV-CF-001
+</h1>
+
+<div class="product-name">
+Cabin Air Filter
+</div>
+
+
+
+<div class="contact-card">
+
+<div class="action-label">
+CUSTOMER SUPPORT
+</div>
+
+<h3>
+Contact GREXVAN Support
+</h3>
 
 <p>
-
 If you need help with fitment, installation,
 warranty registration, or your product,
 please contact GREXVAN Support.
-
 </p>
 
 <p>
-
-<a href="mailto:support@grexvan.com">
-<strong>support@grexvan.com</strong>
-</a>
-
+Our support team can assist with product-specific
+questions and compatibility information.
 </p>
 
+<a class="email-link" href="mailto:support@grexvan.com">
+support@grexvan.com
+</a>
+
 </div>
+
 
 
 <div class="notice">
 
 <p>
-
 <strong>When contacting support</strong>
-
 </p>
 
 <p>
-
 Please include your product number,
 vehicle year, make, model, engine configuration,
 and a description of the issue.
-
 </p>
 
 </div>
 
 
-<div class="card">
 
-<h3>Product Information</h3>
+<div class="info-card">
+
+<h3>
+Product Information
+</h3>
 
 <p>
-
 Product No.: <strong>GV-CF-001</strong><br>
 Product: Cabin Air Filter
-
 </p>
 
 </div>
 
 
-<div class="card">
 
-<h3>Related Support</h3>
+<div class="info-card">
 
-<p>
+<h3>
+Related Support
+</h3>
 
-<a href="/support/cf001/fitment/">
+<div class="support-links">
+
+<a class="support-link" href="/support/cf001/fitment/">
 Vehicle Fitment →
 </a>
 
-</p>
-
-<p>
-
-<a href="/support/cf001/installation/">
+<a class="support-link" href="/support/cf001/installation/">
 Installation Guide →
 </a>
 
-</p>
-
-<p>
-
-<a href="/support/cf001/video/">
+<a class="support-link" href="/support/cf001/video/">
 Installation Video →
 </a>
 
-</p>
-
-<p>
-
-<a href="/support/cf001/warranty/">
+<a class="support-link" href="/support/cf001/warranty/">
 Warranty Registration →
 </a>
 
-</p>
+</div>
 
 </div>
 
 
-<div class="footer">
+
+<div class="navigation">
+
+<a href="/support/cf001/">
+← Back to GV-CF-001 Support
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
 
 GREXVAN · Automotive Maintenance Parts
 
-</div>
+</footer>
 
 
 </div>
+
 
 </body>
 
