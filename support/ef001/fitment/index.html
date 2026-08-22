@@ -8,61 +8,410 @@
 
 <title>GREXVAN GV-EF-001 Vehicle Fitment</title>
 
+<style>
+
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.product-name {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+
+/* Fitment */
+
+.section {
+    border-top: 1px solid var(--light-gray);
+    padding-top: 28px;
+    margin-top: 28px;
+}
+
+.section h3 {
+    margin: 0 0 18px;
+    font-size: 19px;
+}
+
+
+/* Table */
+
+.fitment-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.fitment-table th,
+.fitment-table td {
+    border: 1px solid var(--light-gray);
+    padding: 16px 14px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+.fitment-table th {
+    background: #fafafa;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+
+
+/* Reference Cards */
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.reference-card {
+    border: 1px solid var(--light-gray);
+    padding: 22px;
+}
+
+.reference-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.reference-value {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Exclusion */
+
+.notice {
+    border-left: 3px solid var(--black);
+    padding: 20px;
+    margin-top: 28px;
+    background: #fafafa;
+}
+
+.notice-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.notice p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Verification */
+
+.verification {
+    margin-top: 28px;
+    padding: 22px;
+    border: 1px solid var(--light-gray);
+}
+
+.verification p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .reference-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fitment-table {
+        font-size: 13px;
+    }
+
+    .fitment-table th,
+    .fitment-table td {
+        padding: 12px 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
-<h1>GREXVAN</h1>
 
-<h2>GV-EF-001</h2>
-
-<h3>Engine Air Filter · Vehicle Fitment</h3>
+<div class="container">
 
 
-<p>
-Check vehicle compatibility before installation.
-</p>
+<header class="header">
+
+<div class="brand">
+GREXVAN
+</div>
+
+<div class="page-label">
+FITMENT
+</div>
+
+</header>
 
 
-<table border="1">
+
+<main class="main">
+
+
+<div class="product-label">
+PRODUCT
+</div>
+
+<h1>
+GV-EF-001
+</h1>
+
+<div class="product-name">
+Engine Air Filter · Mazda CX-5
+</div>
+
+
+
+<div class="section">
+
+<h3>
+Vehicle Fitment
+</h3>
+
+<table class="fitment-table">
 
 <tr>
-<th>Make</th>
-<th>Model</th>
-<th>Year</th>
-<th>Application</th>
+
+<th>
+Make
+</th>
+
+<th>
+Model
+</th>
+
+<th>
+Year
+</th>
+
+<th>
+Application
+</th>
+
 </tr>
 
 
 <tr>
-<td>Mazda</td>
-<td>CX-5</td>
-<td>2013–2024</td>
-<td>Applicable Skyactiv-G gasoline configurations using OE reference PE07-13-3A0A</td>
-</tr>
 
+<td>
+Mazda
+</td>
+
+<td>
+CX-5
+</td>
+
+<td>
+2013–2024
+</td>
+
+<td>
+Applicable Skyactiv-G gasoline configurations
+using OE reference PE07-13-3A0A.
+</td>
+
+</tr>
 
 </table>
 
+</div>
+
+
+
+<div class="section">
+
+<h3>
+OE Reference
+</h3>
+
+<div class="reference-grid">
+
+
+<div class="reference-card">
+
+<div class="reference-label">
+CURRENT REFERENCE
+</div>
+
+<div class="reference-value">
+PE07-13-3A0A
+</div>
+
+</div>
+
+
+<div class="reference-card">
+
+<div class="reference-label">
+PREVIOUS / SUPERSEDED
+</div>
+
+<div class="reference-value">
+PE07-13-3A0
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="notice">
+
+<div class="notice-label">
+IMPORTANT EXCLUSION
+</div>
 
 <p>
-
-<strong>OE Reference:</strong> PE07-13-3A0A
-
-</p>
-
-
-<p>
-
-<strong>Previous / Superseded Reference:</strong> PE07-13-3A0
-
-</p>
-
-
-<p>
-
-<strong>Important Exclusion:</strong>
 
 GV-EF-001 is not applicable to Mazda CX-5
 2.5L Skyactiv-G Turbo models using OE reference
@@ -70,14 +419,51 @@ PY8W-13-3A0.
 
 </p>
 
+</div>
+
+
+
+<div class="verification">
 
 <p>
+
+<strong>Compatibility verification:</strong><br>
 
 For product-specific compatibility, always verify the vehicle
 configuration and applicable OE reference before purchase
 or installation.
 
 </p>
+
+</div>
+
+
+
+<div class="navigation">
+
+<a href="/support/ef001/">
+← Back to GV-EF-001 Support
+</a>
+
+<a href="/support/ef001/installation/">
+Installation Guide →
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+GREXVAN · Automotive Maintenance Parts
+
+</footer>
+
+
+</div>
 
 
 </body>
