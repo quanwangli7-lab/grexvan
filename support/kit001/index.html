@@ -6,66 +6,268 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GREXVAN GV-KIT-001 | Mazda CX-5 Air Filter Kit Support</title>
+<title>GREXVAN GV-KIT-001 Support</title>
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px 20px;
-    background: #f7f7f7;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.support-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Product Hero */
+
+.hero {
+    background: var(--white);
+    padding: 45px 35px;
+    margin-top: 25px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.product-name {
+    font-size: 21px;
+    line-height: 1.4;
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 28px;
+.vehicle {
+    font-size: 15px;
+    color: var(--gray);
 }
 
-.product {
-    margin-bottom: 40px;
+
+/* Product Image Placeholder */
+
+.product-image {
+    margin-top: 35px;
+    height: 260px;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--light-gray);
 }
 
-.product-list {
-    margin-top: 20px;
-    margin-bottom: 30px;
+.product-image span {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #888;
 }
 
-.product-item {
-    border: 1px solid #ddd;
-    padding: 16px 20px;
-    margin-bottom: 10px;
+
+/* Kit Components */
+
+.components {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
+.component {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    padding: 22px;
 }
 
-.card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.component-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
-p {
-    line-height: 1.6;
+.component-number {
+    font-size: 18px;
+    font-weight: 600;
 }
 
-a {
-    color: #222;
+.component-name {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 5px;
+}
+
+
+/* Support */
+
+.support-section {
+    margin-top: 45px;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 18px;
+}
+
+.support-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    padding: 24px 25px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: var(--black);
+    transition: border-color 0.2s ease;
+}
+
+.support-card:hover {
+    border-color: var(--black);
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-number {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 1px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.card-description {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 5px;
+}
+
+.arrow {
+    font-size: 20px;
+    color: var(--gray);
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .header {
+        padding-bottom: 20px;
+    }
+
+    .hero {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .product-name {
+        font-size: 19px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .components {
+        grid-template-columns: 1fr;
+    }
+
+    .support-card {
+        padding: 20px;
+    }
+
+    .card-left {
+        gap: 14px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
 }
 
 </style>
@@ -79,161 +281,262 @@ a {
 <div class="container">
 
 
-<h1>GREXVAN</h1>
+<header class="header">
+
+<div class="brand">
+GREXVAN
+</div>
+
+<div class="support-label">
+PRODUCT SUPPORT
+</div>
+
+</header>
 
 
-<div class="product">
 
-<h2>GV-KIT-001</h2>
+<section class="hero">
 
-<p>
-<strong>Mazda CX-5 Cabin + Engine Air Filter Kit</strong>
-</p>
+<div class="product-label">
+PRODUCT
+</div>
 
-<p>
-This kit includes one cabin air filter and one engine air filter
-for applicable Mazda CX-5 vehicles.
-</p>
+<h1>
+GV-KIT-001
+</h1>
 
+<div class="product-name">
+Mazda CX-5 Cabin + Engine Air Filter Kit
+</div>
+
+<div class="vehicle">
+Mazda CX-5
 </div>
 
 
-<div class="product-list">
+<div class="product-image">
 
-<h3>Included Products</h3>
+<span>
+PRODUCT IMAGE
+</span>
+
+</div>
+
+</section>
 
 
-<div class="product-item">
 
-<strong>GV-CF-001</strong>
+<section class="components">
 
-<p>
+<div class="component">
+
+<div class="component-label">
+01 · CABIN
+</div>
+
+<div class="component-number">
+GV-CF-001
+</div>
+
+<div class="component-name">
 Cabin Air Filter
-</p>
-
-<a href="/support/cf001/">
-View GV-CF-001 Support
-</a>
+</div>
 
 </div>
 
 
-<div class="product-item">
+<div class="component">
 
-<strong>GV-EF-001</strong>
+<div class="component-label">
+02 · ENGINE
+</div>
 
-<p>
+<div class="component-number">
+GV-EF-001
+</div>
+
+<div class="component-name">
 Engine Air Filter
-</p>
-
-<a href="/support/ef001/">
-View GV-EF-001 Support
-</a>
+</div>
 
 </div>
 
+</section>
 
+
+
+<section class="support-section">
+
+<div class="section-label">
+SUPPORT
 </div>
 
 
-<nav>
 
-<p>
-<a href="/support/kit001/fitment/">
+<a class="support-card"
+href="/support/kit001/fitment/">
+
+<div class="card-left">
+
+<div class="card-number">
+01
+</div>
+
+<div>
+
+<div class="card-title">
 Vehicle Fitment
-</a>
-</p>
+</div>
 
-<p>
-<a href="/support/kit001/installation/">
+<div class="card-description">
+Check vehicle compatibility before installation.
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
+</a>
+
+
+
+<a class="support-card"
+href="/support/kit001/installation/">
+
+<div class="card-left">
+
+<div class="card-number">
+02
+</div>
+
+<div>
+
+<div class="card-title">
 Installation Guide
-</a>
-</p>
+</div>
 
-<p>
-<a href="/support/kit001/video/">
+<div class="card-description">
+View installation instructions for the kit.
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
+</a>
+
+
+
+<a class="support-card"
+href="/support/kit001/video/">
+
+<div class="card-left">
+
+<div class="card-number">
+03
+</div>
+
+<div>
+
+<div class="card-title">
 Installation Video
-</a>
-</p>
+</div>
 
-<p>
-<a href="/support/kit001/warranty/">
+<div class="card-description">
+Watch the kit installation video.
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
+</a>
+
+
+
+<a class="support-card"
+href="/support/kit001/warranty/">
+
+<div class="card-left">
+
+<div class="card-number">
+04
+</div>
+
+<div>
+
+<div class="card-title">
 Warranty Registration
-</a>
-</p>
+</div>
 
-<p>
-<a href="/support/kit001/contact/">
+<div class="card-description">
+Warranty assistance and registration support.
+</div>
+
+</div>
+
+</div>
+
+<div class="arrow">
+→
+</div>
+
+</a>
+
+
+
+<a class="support-card"
+href="/support/kit001/contact/">
+
+<div class="card-left">
+
+<div class="card-number">
+05
+</div>
+
+<div>
+
+<div class="card-title">
 Contact Support
-</a>
-</p>
+</div>
 
-</nav>
-
-
-<div class="card">
-
-<h3>Vehicle Fitment</h3>
-
-<p>
-<a href="/support/kit001/fitment/">
-Check vehicle compatibility
-</a>
-</p>
+<div class="card-description">
+Get help from GREXVAN Support.
+</div>
 
 </div>
 
-
-<div class="card">
-
-<h3>Installation Guide</h3>
-
-<p>
-<a href="/support/kit001/installation/">
-View installation instructions
-</a>
-</p>
-
 </div>
 
-
-<div class="card">
-
-<h3>Installation Video</h3>
-
-<p>
-<a href="/support/kit001/video/">
-View installation video
-</a>
-</p>
-
+<div class="arrow">
+→
 </div>
 
-
-<div class="card">
-
-<h3>Warranty Registration</h3>
-
-<p>
-<a href="/support/kit001/warranty/">
-Register product warranty
 </a>
-</p>
-
-</div>
 
 
-<div class="card">
 
-<h3>Contact Support</h3>
+</section>
 
-<p>
-<a href="/support/kit001/contact/">
-Contact GREXVAN Support
-</a>
-</p>
 
-</div>
+
+<footer class="footer">
+
+GREXVAN · Automotive Maintenance Parts
+
+</footer>
 
 
 </div>
