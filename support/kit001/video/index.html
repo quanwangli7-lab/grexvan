@@ -10,52 +10,216 @@
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px 20px;
-    background: #f7f7f7;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Main */
+
+.main {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 45px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 10px;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 35px;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
+
+/* Intro */
+
+.intro {
+    border-top: 1px solid var(--light-gray);
+    padding: 28px 0;
 }
 
-.card h3 {
-    margin-top: 0;
+.intro p {
+    margin: 0;
+    line-height: 1.7;
 }
 
-p {
+
+/* Video Cards */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.video-card {
+    border: 1px solid var(--light-gray);
+    padding: 24px;
+}
+
+.video-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.video-card h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+}
+
+.video-card p {
+    margin: 0 0 18px;
+    font-size: 14px;
     line-height: 1.6;
 }
 
-a {
-    color: #222;
+.video-card a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
 }
 
+.video-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* Notice */
+
 .notice {
-    border-left: 3px solid #222;
-    padding-left: 16px;
+    border-left: 3px solid var(--black);
+    padding: 18px 20px;
     margin-top: 30px;
+    background: #fafafa;
+}
+
+.notice strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.notice p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+/* Navigation */
+
+.navigation {
+    margin-top: 35px;
+}
+
+.navigation a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .main {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 </style>
@@ -69,19 +233,38 @@ a {
 <div class="container">
 
 
-<h1>GREXVAN</h1>
+<header class="header">
+
+<div class="brand">
+GREXVAN
+</div>
+
+<div class="page-label">
+INSTALLATION VIDEO
+</div>
+
+</header>
 
 
-<h2>GV-KIT-001</h2>
 
-<p>
-<strong>Mazda CX-5 Cabin + Engine Air Filter Kit</strong>
-</p>
+<main class="main">
 
 
-<div class="card">
+<div class="product-label">
+PRODUCT
+</div>
 
-<h3>Installation Video</h3>
+<h1>
+GV-KIT-001
+</h1>
+
+<h2>
+Mazda CX-5 Cabin + Engine Air Filter Kit
+</h2>
+
+
+
+<div class="intro">
 
 <p>
 
@@ -93,55 +276,60 @@ included in the GREXVAN GV-KIT-001 are available below.
 </div>
 
 
-<div class="card">
 
-<h3>01 — Cabin Air Filter</h3>
+<div class="video-grid">
+
+
+<div class="video-card">
+
+<div class="video-label">
+01 · CABIN AIR FILTER
+</div>
+
+<h3>
+GV-CF-001
+</h3>
 
 <p>
-
-Product No.: <strong>GV-CF-001</strong>
-
+Cabin Air Filter
 </p>
-
-<p>
 
 <a href="/support/cf001/video/">
 View GV-CF-001 Installation Video →
 </a>
 
-</p>
-
 </div>
 
 
-<div class="card">
 
-<h3>02 — Engine Air Filter</h3>
+<div class="video-card">
+
+<div class="video-label">
+02 · ENGINE AIR FILTER
+</div>
+
+<h3>
+GV-EF-001
+</h3>
 
 <p>
-
-Product No.: <strong>GV-EF-001</strong>
-
+Engine Air Filter
 </p>
-
-<p>
 
 <a href="/support/ef001/video/">
 View GV-EF-001 Installation Video →
 </a>
 
-</p>
+</div>
+
 
 </div>
 
 
+
 <div class="notice">
 
-<p>
-
-<strong>Important:</strong>
-
-</p>
+<strong>Important</strong>
 
 <p>
 
@@ -153,13 +341,25 @@ Always verify the applicable product fitment before installation.
 </div>
 
 
-<p>
+
+<div class="navigation">
 
 <a href="/support/kit001/">
 ← Back to GV-KIT-001 Support
 </a>
 
-</p>
+</div>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+GREXVAN · Automotive Maintenance Parts
+
+</footer>
 
 
 </div>
