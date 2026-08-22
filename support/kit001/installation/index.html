@@ -10,209 +10,75 @@
 
 <style>
 
-:root {
-    --black: #111111;
-    --gray: #666666;
-    --light-gray: #e8e8e8;
-    --background: #f7f7f7;
-    --white: #ffffff;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--black);
-    background: var(--background);
+    color: #111;
+    background: #fff;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px 20px 60px;
-}
-
-
-/* Header */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 25px;
-    border-bottom: 2px solid var(--black);
+    padding: 70px 24px;
 }
 
 .brand {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 45px;
 }
 
-.page-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: var(--gray);
-}
-
-
-/* Main */
-
-.main {
-    background: var(--white);
-    margin-top: 25px;
-    padding: 45px 35px;
-    border: 1px solid var(--light-gray);
-}
-
-.product-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: var(--gray);
+.label {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #666;
     margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 42px;
-    line-height: 1.1;
-    margin: 0 0 10px;
+    font-size: 40px;
+    margin: 0 0 12px;
 }
 
-.product-name {
-    font-size: 21px;
-    margin-bottom: 35px;
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 40px;
 }
 
+.card {
+    border-top: 1px solid #ddd;
+    padding: 28px 0;
+}
 
-/* Notice */
+.card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card p {
+    line-height: 1.7;
+}
 
 .notice {
-    border-left: 3px solid var(--black);
-    padding: 18px 20px;
-    margin: 25px 0;
-    background: #fafafa;
+    border-left: 3px solid #111;
+    padding-left: 18px;
+    margin: 30px 0;
 }
 
-.notice p {
-    margin: 0 0 8px;
-    line-height: 1.7;
-    font-size: 14px;
-}
-
-.notice p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* Installation Cards */
-
-.installation-card {
-    border: 1px solid var(--light-gray);
-    padding: 28px;
-    margin-bottom: 15px;
-    background: var(--white);
-}
-
-.step-number {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: var(--gray);
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.installation-card h2 {
-    margin: 0 0 8px;
-    font-size: 22px;
-}
-
-.product-code {
-    font-size: 14px;
-    color: var(--gray);
-    margin-bottom: 18px;
-}
-
-.installation-card p {
-    line-height: 1.7;
-    font-size: 14px;
-    margin: 0 0 16px;
-}
-
-.installation-card p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* Links */
-
-.support-link {
-    color: var(--black);
+a {
+    color: #111;
     text-decoration: none;
-    font-weight: 600;
 }
-
-.support-link:hover {
-    text-decoration: underline;
-}
-
-
-/* Navigation */
-
-.navigation {
-    margin-top: 35px;
-}
-
-.navigation a {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.navigation a:hover {
-    text-decoration: underline;
-}
-
-
-/* Footer */
 
 .footer {
     margin-top: 55px;
     padding-top: 25px;
-    border-top: 1px solid var(--light-gray);
-    font-size: 12px;
-    color: var(--gray);
-    letter-spacing: 0.5px;
-}
-
-
-/* Mobile */
-
-@media (max-width: 650px) {
-
-    .container {
-        padding: 20px 15px 45px;
-    }
-
-    .main {
-        padding: 30px 22px;
-    }
-
-    h1 {
-        font-size: 34px;
-    }
-
-    .product-name {
-        font-size: 19px;
-    }
-
-    .installation-card {
-        padding: 22px;
-    }
-
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+    color: #666;
 }
 
 </style>
@@ -222,172 +88,148 @@ h1 {
 
 <body>
 
-
 <div class="container">
 
-
-<header class="header">
 
 <div class="brand">
 GREXVAN
 </div>
 
-<div class="page-label">
+
+<div class="label">
 INSTALLATION GUIDE
 </div>
 
-</header>
+
+<h1>GV-KIT-001</h1>
+
+<h2>Mazda CX-5 Cabin + Engine Air Filter Kit</h2>
 
 
+<div class="card">
 
-<main class="main">
-
-
-<div class="product-label">
-KIT INSTALLATION
-</div>
-
-<h1>
-GV-KIT-001
-</h1>
-
-<div class="product-name">
-Mazda CX-5 Cabin + Engine Air Filter Kit
-</div>
-
-
-
-<div class="notice">
+<h3>Before Installation</h3>
 
 <p>
-<strong>Before Installation</strong>
-</p>
 
-<p>
 Confirm that your vehicle matches the applicable
 fitment information before installing either filter.
+
 </p>
 
 </div>
 
 
 
-<section class="installation-card">
+<div class="card">
 
-<div class="step-number">
-01 · CABIN AIR FILTER
-</div>
-
-<h2>
-GV-CF-001
-</h2>
-
-<div class="product-code">
-Cabin Air Filter
-</div>
+<h3>01 — Cabin Air Filter</h3>
 
 <p>
+
+<strong>GV-CF-001</strong><br>
+Cabin Air Filter
+
+</p>
+
+<p>
+
 Follow the dedicated cabin air filter installation guide
 for removal and installation instructions.
+
 </p>
 
 <p>
-<a class="support-link" href="/support/cf001/installation/">
+
+<a href="/support/cf001/installation/">
 View GV-CF-001 Installation Guide →
 </a>
+
 </p>
 
-</section>
-
-
-
-<section class="installation-card">
-
-<div class="step-number">
-02 · ENGINE AIR FILTER
 </div>
 
-<h2>
-GV-EF-001
-</h2>
 
-<div class="product-code">
-Engine Air Filter
-</div>
+
+<div class="card">
+
+<h3>02 — Engine Air Filter</h3>
 
 <p>
+
+<strong>GV-EF-001</strong><br>
+Engine Air Filter
+
+</p>
+
+<p>
+
 Follow the dedicated engine air filter installation guide
 for removal and installation instructions.
+
 </p>
 
 <p>
-<a class="support-link" href="/support/ef001/installation/">
+
+<a href="/support/ef001/installation/">
 View GV-EF-001 Installation Guide →
 </a>
+
 </p>
 
-</section>
-
-
-
-<section class="installation-card">
-
-<div class="step-number">
-VIDEO REFERENCE
 </div>
 
-<h2>
-Installation Video
-</h2>
+
+
+<div class="card">
+
+<h3>Installation Video</h3>
 
 <p>
+
 Installation videos for the individual filters included in
 GV-KIT-001 are available on the kit video page.
+
 </p>
 
 <p>
-<a class="support-link" href="/support/kit001/video/">
+
+<a href="/support/kit001/video/">
 View GV-KIT-001 Installation Video →
 </a>
+
 </p>
 
-</section>
+</div>
 
 
 
 <div class="notice">
 
 <p>
-<strong>Important</strong>
+
+<strong>Important:</strong>
+
 </p>
 
 <p>
+
 Installation procedures may vary by vehicle configuration.
 Always verify the correct application before installation.
+
 </p>
 
 </div>
 
 
 
-<div class="navigation">
+<p>
 
 <a href="/support/kit001/">
 ← Back to GV-KIT-001 Support
 </a>
 
-</div>
-
-
-</main>
-
-
-
-<footer class="footer">
-
-GREXVAN · Automotive Maintenance Parts
-
-</footer>
+</p>
 
 
 </div>
