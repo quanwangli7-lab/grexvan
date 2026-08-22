@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GREXVAN GV-KIT-001 Vehicle Fitment</title>
+<title>GREXVAN GV-KIT-001 Support</title>
 
 <style>
 
@@ -87,78 +87,79 @@ h1 {
     margin-bottom: 35px;
 }
 
-
-/* Cards */
-
-.info-card {
-    border: 1px solid var(--light-gray);
-    padding: 24px;
-    margin-bottom: 14px;
-    background: var(--white);
+.intro {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
 
-.info-card h3 {
-    margin: 0 0 15px;
+
+/* Components */
+
+.section {
+    border-top: 1px solid var(--light-gray);
+    padding: 28px 0;
+}
+
+.section h3 {
+    margin: 0 0 18px;
+    font-size: 19px;
+}
+
+.component-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.component {
+    border: 1px solid var(--light-gray);
+    padding: 22px;
+}
+
+.component-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.component h4 {
+    margin: 0 0 8px;
     font-size: 18px;
 }
 
-.info-card p {
-    margin: 0 0 12px;
-    line-height: 1.7;
+.component p {
+    margin: 0 0 14px;
+    line-height: 1.6;
     font-size: 14px;
 }
 
-.info-card p:last-child {
-    margin-bottom: 0;
+.component a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.component a:hover {
+    text-decoration: underline;
 }
 
 
-/* Fitment Table */
+/* Support Links */
 
-.fitment-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
-
-.fitment-table th,
-.fitment-table td {
-    border: 1px solid var(--light-gray);
-    padding: 14px 12px;
-    text-align: left;
-    vertical-align: top;
-    line-height: 1.5;
-}
-
-.fitment-table th {
-    background: #fafafa;
-    font-weight: 700;
-}
-
-
-/* Notice */
-
-.notice {
-    border-left: 3px solid var(--black);
-    padding: 18px 20px;
-    margin: 25px 0;
-    background: #fafafa;
-}
-
-.notice p {
-    margin: 0 0 8px;
-    line-height: 1.7;
-    font-size: 14px;
-}
-
-.notice p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* Links */
 
 .support-link {
+    display: block;
+    padding: 17px 18px;
+    border: 1px solid var(--light-gray);
     color: var(--black);
     text-decoration: none;
     font-size: 14px;
@@ -166,7 +167,7 @@ h1 {
 }
 
 .support-link:hover {
-    text-decoration: underline;
+    border-color: var(--black);
 }
 
 
@@ -174,9 +175,6 @@ h1 {
 
 .navigation {
     margin-top: 35px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
 }
 
 .navigation a {
@@ -205,7 +203,7 @@ h1 {
 
 /* Mobile */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
     .container {
         padding: 20px 15px 45px;
@@ -223,18 +221,9 @@ h1 {
         font-size: 19px;
     }
 
-    .fitment-table {
-        font-size: 12px;
-    }
-
-    .fitment-table th,
-    .fitment-table td {
-        padding: 10px 8px;
-    }
-
-    .navigation {
-        flex-direction: column;
-        gap: 15px;
+    .component-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -257,7 +246,7 @@ GREXVAN
 </div>
 
 <div class="page-label">
-FITMENT
+SUPPORT
 </div>
 
 </header>
@@ -268,7 +257,7 @@ FITMENT
 
 
 <div class="product-label">
-VEHICLE COMPATIBILITY
+PRODUCT
 </div>
 
 <h1>
@@ -280,124 +269,139 @@ Mazda CX-5 Cabin + Engine Air Filter Kit
 </div>
 
 
+<p class="intro">
 
-<div class="info-card">
+This kit includes one cabin air filter and one engine air filter
+for applicable Mazda CX-5 vehicles.
+
+</p>
+
+
+
+<section class="section">
 
 <h3>
-Vehicle Fitment
+Included Products
 </h3>
 
-<p>
-Check vehicle compatibility before purchase
-or installation.
-</p>
 
-<table class="fitment-table">
+<div class="component-grid">
 
-<tr>
-<th>Make</th>
-<th>Model</th>
-<th>Year</th>
-<th>Application</th>
-</tr>
 
-<tr>
-<td>Mazda</td>
-<td>CX-5</td>
-<td>2013–2024</td>
-<td>
-Applicable CX-5 configurations
-</td>
-</tr>
+<div class="component">
 
-</table>
-
+<div class="component-label">
+CABIN AIR FILTER
 </div>
 
-
-
-<div class="info-card">
-
-<h3>
-Kit Components
-</h3>
+<h4>
+GV-CF-001
+</h4>
 
 <p>
-<strong>Cabin Air Filter</strong><br>
-Product No.: GV-CF-001<br>
-OE Reference: KD45-61-J6X series
+Cabin Air Filter
 </p>
 
-<p>
-<strong>Engine Air Filter</strong><br>
-Product No.: GV-EF-001<br>
-OE Reference: PE07-13-3A0A<br>
-Previous / Superseded Reference: PE07-13-3A0
-</p>
-
-</div>
-
-
-
-<div class="notice">
-
-<p>
-<strong>Important Exclusion</strong>
-</p>
-
-<p>
-GV-KIT-001 is not applicable to Mazda CX-5
-2.5L Skyactiv-G Turbo models using OE reference
-PY8W-13-3A0.
-</p>
-
-</div>
-
-
-
-<div class="info-card">
-
-<h3>
-Check Individual Product Fitment
-</h3>
-
-<p>
-<a class="support-link" href="/support/cf001/fitment/">
-View GV-CF-001 Fitment →
+<a href="/support/cf001/">
+View GV-CF-001 Support →
 </a>
-</p>
+
+</div>
+
+
+
+<div class="component">
+
+<div class="component-label">
+ENGINE AIR FILTER
+</div>
+
+<h4>
+GV-EF-001
+</h4>
 
 <p>
-<a class="support-link" href="/support/ef001/fitment/">
-View GV-EF-001 Fitment →
+Engine Air Filter
+</p>
+
+<a href="/support/ef001/">
+View GV-EF-001 Support →
 </a>
-</p>
 
 </div>
 
 
+</div>
 
-<div class="notice">
+</section>
 
-<p>
-<strong>Fitment Verification</strong>
-</p>
 
-<p>
-Vehicle fitment depends on model year,
-engine configuration, and applicable OE reference.
-Please verify the vehicle configuration before
-purchase or installation.
-</p>
+
+<section class="section">
+
+<h3>
+Kit Support
+</h3>
+
+
+<div class="support-grid">
+
+
+<a
+class="support-link"
+href="/support/kit001/fitment/">
+
+Vehicle Fitment →
+
+</a>
+
+
+<a
+class="support-link"
+href="/support/kit001/installation/">
+
+Installation Guide →
+
+</a>
+
+
+<a
+class="support-link"
+href="/support/kit001/video/">
+
+Installation Video →
+
+</a>
+
+
+<a
+class="support-link"
+href="/support/kit001/warranty/">
+
+Warranty Registration →
+
+</a>
+
+
+<a
+class="support-link"
+href="/support/kit001/contact/">
+
+Contact Support →
+
+</a>
+
 
 </div>
+
+</section>
 
 
 
 <div class="navigation">
 
-<a href="/support/kit001/">
-← Back to GV-KIT-001 Support
+<a href="/support/">
+← Back to GREXVAN Support
 </a>
 
 </div>
