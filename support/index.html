@@ -10,39 +10,207 @@
 
 <style>
 
+:root {
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #e8e8e8;
+    --background: #f7f7f7;
+    --white: #ffffff;
+    --red: #b32025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px;
-    background: #f7f7f7;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--background);
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--black);
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.page-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+
+/* Hero */
+
+.hero {
+    background: var(--white);
+    margin-top: 25px;
+    padding: 50px 35px;
+    border: 1px solid var(--light-gray);
+}
+
+.product-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 15px;
 }
 
-.subtitle {
-    color: #555;
-    margin-bottom: 40px;
+.hero p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 25px;
-    margin-bottom: 20px;
+
+/* Product Section */
+
+.section-label {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    font-weight: 700;
 }
 
-a {
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+
+/* Product Card */
+
+.product-card {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    padding: 30px;
+    color: var(--black);
     text-decoration: none;
-    color: #222;
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.product-card:hover {
+    border-color: var(--black);
+    transform: translateY(-2px);
+}
+
+.product-type {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.product-card h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.product-link {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* Featured Kit */
+
+.kit-card {
+    grid-column: 1 / -1;
+}
+
+.kit-card .product-card {
+    border-top: 3px solid var(--black);
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 55px;
+    padding-top: 25px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .container {
+        padding: 20px 15px 45px;
+    }
+
+    .header {
+        padding-bottom: 20px;
+    }
+
+    .hero {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .kit-card {
+        grid-column: auto;
+    }
+
 }
 
 </style>
@@ -56,73 +224,141 @@ a {
 <div class="container">
 
 
-<h1>GREXVAN Support</h1>
+<header class="header">
+
+<div class="brand">
+GREXVAN
+</div>
+
+<div class="page-label">
+SUPPORT
+</div>
+
+</header>
 
 
-<p class="subtitle">
-Product support, installation guides, vehicle fitment, and warranty services.
+
+<section class="hero">
+
+<div class="product-label">
+PRODUCT SUPPORT
+</div>
+
+<h1>
+GREXVAN Support
+</h1>
+
+<p>
+Product support, installation guides, vehicle fitment,
+and warranty services.
 </p>
 
+</section>
 
 
-<div class="card">
+
+<div class="section-label">
+SELECT A PRODUCT
+</div>
+
+
+
+<section class="products">
+
+
+<a class="product-card" href="/support/ef001/">
+
+<div class="product-type">
+ENGINE AIR FILTER
+</div>
 
 <h2>
-<a href="/support/ef001/">
 GV-EF-001
-</a>
 </h2>
 
-<p>
+<div class="product-name">
 Engine Air Filter
-</p>
-
-<p>
-Vehicle fitment, installation guide, and product support.
-</p>
-
 </div>
 
+<div class="product-description">
+Vehicle fitment, installation guide,
+installation video, warranty, and product support.
+</div>
+
+<div class="product-link">
+View Product Support →
+</div>
+
+</a>
 
 
-<div class="card">
+
+<a class="product-card" href="/support/cf001/">
+
+<div class="product-type">
+CABIN AIR FILTER
+</div>
 
 <h2>
-<a href="/support/cf001/">
 GV-CF-001
-</a>
 </h2>
 
-<p>
+<div class="product-name">
 Cabin Air Filter
-</p>
-
-<p>
-Vehicle fitment, installation guide, and product support.
-</p>
-
 </div>
 
+<div class="product-description">
+Vehicle fitment, installation guide,
+installation video, warranty, and product support.
+</div>
+
+<div class="product-link">
+View Product Support →
+</div>
+
+</a>
 
 
-<div class="card">
+
+<div class="kit-card">
+
+<a class="product-card" href="/support/kit001/">
+
+<div class="product-type">
+FILTER KIT</div>
 
 <h2>
-<a href="/support/kit001/">
 GV-KIT-001
-</a>
 </h2>
 
-<p>
+<div class="product-name">
 Mazda CX-5 Cabin + Engine Air Filter Kit
-</p>
+</div>
 
-<p>
-Vehicle fitment, installation guide, and product support.
-</p>
+<div class="product-description">
+Vehicle fitment, installation guide,
+installation video, warranty, and product support
+for the complete filter kit.
+</div>
+
+<div class="product-link">
+View Kit Support →
+</div>
+
+</a>
 
 </div>
 
+
+</section>
+
+
+
+<footer class="footer">
+
+GREXVAN · Automotive Maintenance Parts
+
+</footer>
 
 
 </div>
