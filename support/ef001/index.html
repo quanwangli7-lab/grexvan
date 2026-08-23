@@ -93,22 +93,22 @@ h1 {
 }
 
 
-/* Product Image Placeholder */
+/* Product Image */
 
 .product-image {
     margin-top: 35px;
-    height: 260px;
-    background: #f2f2f2;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border: 1px solid var(--light-gray);
+    align-items: center;
+    padding: 10px 0 20px;
 }
 
-.product-image span {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    color: #888;
+.product-image img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 
@@ -209,7 +209,11 @@ h1 {
     }
 
     .product-image {
-        height: 210px;
+        padding: 5px 0 15px;
+    }
+
+    .product-image img {
+        max-width: 100%;
     }
 
     .support-card {
@@ -276,9 +280,10 @@ Mazda CX-5
 
 <div class="product-image">
 
-<span>
-PRODUCT IMAGE
-</span>
+<img
+src="/support/ef001/images/GV-EF-001_main.jpg"
+alt="GREXVAN GV-EF-001 Engine Air Filter for Mazda CX-5"
+>
 
 </div>
 
