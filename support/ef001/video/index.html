@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>GREXVAN GV-EF-001 Installation Video | Mazda CX-5</title>
@@ -197,10 +198,11 @@ h1 {
 
 </style>
 
+<link rel="stylesheet" href="../../support.css">
 </head>
 
 
-<body>
+<body><aside class="component-status"><strong>Component of GV-KIT-001</strong><p>Included in GV-KIT-001. Not currently sold separately. <a href="../../kit001/index.html">View the complete filter kit →</a></p></aside>
 
 
 <div class="container">
@@ -216,7 +218,7 @@ GREXVAN
 INSTALLATION VIDEO
 </div>
 
-</header>
+</header><nav class="support-context" aria-label="Support navigation"><a href="../../../index.html">← Home</a><a href="../../index.html">All products</a><a href="../index.html">Product details</a><a href="../fitment/index.html">Vehicle fitment</a><a href="../contact/index.html">Contact</a></nav>
 
 
 
@@ -240,11 +242,12 @@ Engine Air Filter · Mazda CX-5
 <div class="video">
 
 <iframe
+referrerpolicy="strict-origin-when-cross-origin"
 src="https://www.youtube.com/embed/FSXjlKK1vaQ"
 title="GREXVAN GV-EF-001 Mazda CX-5 Engine Air Filter Installation"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
-</iframe>
+</iframe><p class="video-fallback">Video not loading? <a href="https://www.youtube.com/watch?v=FSXjlKK1vaQ" target="_blank" rel="noopener">Open the installation video on YouTube →</a></p>
 
 </div>
 
@@ -302,11 +305,11 @@ GREXVAN GV-EF-001 Engine Air Filter.
 
 <div class="navigation">
 
-<a href="/support/ef001/">
+<a href="../index.html">
 ← Back to GV-EF-001 Support
 </a>
 
-<a href="/support/ef001/installation/">
+<a href="../installation/index.html">
 Installation Guide →
 </a>
 
@@ -327,6 +330,18 @@ GREXVAN · Automotive Maintenance Parts
 </div>
 
 
+<script>
+if (location.protocol === 'file:') {
+    const player = document.querySelector('iframe');
+    if (player) {
+        const notice = document.createElement('p');
+        notice.className = 'video-fallback';
+        notice.textContent = 'Local file preview may not support YouTube playback. Open this page through a web server, or use the YouTube link below.';
+        player.before(notice);
+    }
+}
+</script>
 </body>
 
 </html>
+
