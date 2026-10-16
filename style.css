@@ -2218,7 +2218,7 @@ p {
 /* Product image sizing: equal presentation areas, uncropped source proportions. */
 .hero-image-frame { min-height: 0; }
 .hero-image-frame { align-items: center; }
-.hero-product-image { display: block; width: min(100%, 300px); height: auto; aspect-ratio: 1 / 1; flex: 0 0 auto; padding: 0; object-fit: contain; }
+.hero-product-image { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; flex: 0 0 auto; padding: 0; object-fit: contain; }
 .hero-product-label { width: 100%; }
 .featured-kit { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
 .featured-kit > a,
@@ -2226,7 +2226,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 220px;
+    height: 320px;
     background: #fff;
     overflow: hidden;
 }
@@ -2234,9 +2234,9 @@ p {
 .featured-kit > a img,
 .kit-components .product-image-link img {
     display: block;
-    width: min(100%, 210px);
-    height: 210px;
-    max-width: 210px;
+    width: min(100%, 300px);
+    height: 300px;
+    max-width: 300px;
     aspect-ratio: auto;
     object-fit: contain;
     object-position: center;
@@ -2245,7 +2245,7 @@ p {
 @media (max-width: 700px) {
     .featured-kit { grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .featured-kit > a,
-    .kit-components .product-image-link { height: 220px; }
+    .kit-components .product-image-link { height: 320px; }
     .featured-kit > a img,
-    .kit-components .product-image-link img { width: min(100%, 210px); height: 210px; max-width: 210px; padding: 16px; }
+    .kit-components .product-image-link img { width: min(100%, 300px); height: 300px; max-width: 300px; padding: 16px; }
 }
