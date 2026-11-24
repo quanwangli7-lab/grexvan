@@ -1,0 +1,44 @@
+{
+  "sku": "GV-KIT-001",
+  "asin": "B0HGZ3ZXWM",
+  "amazon_url": "https://www.amazon.com/dp/B0HGZ3ZXWM",
+  "components": [
+    {
+      "sku": "GV-CF-001",
+      "name": "Cabin Air Filter",
+      "oe_reference": [
+        "KD45-61-J6X series"
+      ]
+    },
+    {
+      "sku": "GV-EF-001",
+      "name": "Engine Air Filter",
+      "oe_reference": [
+        "PE07-13-3A0",
+        "PE07-13-3A0A"
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "engine": "2.0L gasoline",
+      "year_from": 2013,
+      "year_to": 2019,
+      "induction": "naturally aspirated"
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "engine": "2.5L gasoline",
+      "year_from": 2014,
+      "year_to": 2025,
+      "induction": "naturally aspirated"
+    }
+  ],
+  "excluded": [
+    "turbocharged models"
+  ],
+  "verification": "Website and Amazon listing consistency checked; owner manually confirmed ASIN/engine/year information. Not a manufacturer engineering or VIN-specific certification."
+}
