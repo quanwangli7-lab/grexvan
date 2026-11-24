@@ -1,3 +1,7 @@
+# Allow crawlers to read the host-specific noindex header on test previews.
+# Blocking all preview crawling here would prevent crawlers from seeing noindex.
 User-agent: *
 Allow: /
+Disallow: /tests/
+Disallow: /docs/
 Sitemap: https://grexvan.com/sitemap.xml

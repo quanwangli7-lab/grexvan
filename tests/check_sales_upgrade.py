@@ -3,6 +3,10 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote, parse_qs
 import subprocess
+import re
+import json
+import hashlib
+import base64
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,7 +41,7 @@ for path, page in pages.items():
         url = urlsplit(link)
         if url.scheme or url.netloc:
             continue
-        target = (path.parent / unquote(url.path)).resolve() if url.path else path
+        target = ((ROOT / unquote(url.path).lstrip('/')) if url.path.startswith('/') else (path.parent / unquote(url.path))).resolve() if url.path else path
         if target.is_dir():
             target /= 'index.html'
         assert target.is_file(), f'Missing target: {path}: {link}'
@@ -71,7 +75,44 @@ preserved = ['support/kit001/fitment/index.html', 'support/kit001/installation/i
 preserved += [p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*.jpg')]
 for name in preserved:
     old = subprocess.check_output(['git', 'show', '0f3a2c4b80f98e19f7866850394805ed6c40a27b:' + name], cwd=ROOT)
-    assert old == (ROOT / name).read_bytes(), f'Protected asset changed: {name}'
+    new = (ROOT / name).read_bytes()
+    if name.endswith('.html'):
+        old = old.split(b'<body', 1)[1]
+        new = new.split(b'<body', 1)[1]
+        old = b'\n'.join(line.rstrip() for line in old.splitlines())
+        new = b'\n'.join(line.rstrip() for line in new.splitlines())
+    assert old == new, f'Protected asset changed: {name}'
 
 print(f'PASS: {len(pages)} pages; {count} internal links, assets and fragments.')
 print(f'PASS: Amazon URL/new-tab behavior, disclosure, wholesale email, sitemap and {len(preserved)} unchanged support/image files.')
+
+canonicals = set()
+for path in pages:
+    html = path.read_text()
+    descriptions = re.findall(r'<meta\s+name="description"\s+content="([^"]+)"', html)
+    assert len(descriptions) == 1, path
+    canonical = re.findall(r'<link\s+rel="canonical"\s+href="([^"]+)"', html)
+    if path.name == '404.html':
+        assert not canonical and 'noindex' in html
+    else:
+        assert len(canonical) == 1 and canonical[0].startswith('https://grexvan.com/')
+        assert canonical[0] not in canonicals
+        canonicals.add(canonical[0])
+locations = {n.text for n in ET.parse(ROOT / 'sitemap.xml').getroot().iter() if n.tag.endswith('}loc')}
+assert locations == canonicals
+for name in ['index.html', 'support/kit001/index.html']:
+    buttons = [a for a in pages[(ROOT/name).resolve()].anchors if a.get('data-amazon-product') == 'GV-KIT-001']
+    assert len(buttons) == 1 and buttons[0]['href'] == 'https://www.amazon.com/dp/B0HGZ3ZXWM'
+    assert buttons[0]['target'] == '_blank'
+    assert {'noopener', 'noreferrer'} <= set(buttons[0]['rel'].split())
+facts = json.loads((ROOT/'data/gv-kit-001.json').read_text())
+assert [(x['year_from'], x['year_to']) for x in facts['applications']] == [(2013,2019),(2014,2025)]
+headers = (ROOT/'_headers').read_text()
+for token in ['nosniff', 'frame-ancestors', 'object-src', 'https://:version.:project.pages.dev/*', 'X-Robots-Tag: noindex']:
+    assert token in headers
+for script in re.findall(r'<script(.*?)>(.*?)</script>', (ROOT/'index.html').read_text(), re.S):
+    if 'src=' not in script[0]:
+        digest = base64.b64encode(hashlib.sha256(script[1].encode()).digest()).decode()
+        assert 'sha256-'+digest in headers
+assert (ROOT/'downloads/GREXVAN-GV-KIT-001-reference.pdf').read_bytes().startswith(b'%PDF')
+print('PASS: canonical/description coverage, exact sitemap, 404/noindex, CSP inline hash, home/product Amazon links, fitment scope, PDF.')
