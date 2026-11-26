@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://grexvan.com/about/</loc></url>
 <url><loc>https://grexvan.com/</loc></url>
+<url><loc>https://grexvan.com/privacy/</loc></url>
 <url><loc>https://grexvan.com/support/cf001/contact/</loc></url>
 <url><loc>https://grexvan.com/support/cf001/fitment/</loc></url>
 <url><loc>https://grexvan.com/support/cf001/</loc></url>
@@ -20,4 +22,5 @@
 <url><loc>https://grexvan.com/support/kit001/installation/</loc></url>
 <url><loc>https://grexvan.com/support/kit001/video/</loc></url>
 <url><loc>https://grexvan.com/support/kit001/warranty/</loc></url>
-</urlset>
+<url><loc>https://grexvan.com/wholesale/</loc></url>
+<url><loc>https://grexvan.com/products/</loc></url><url><loc>https://grexvan.com/contact/</loc></url></urlset>

@@ -1,3 +1,6 @@
+# Legacy approved-document compatibility; exact paths precede other rules.
+/support/kit001/images/%E4%B8%BB%E5%9B%BE.pdf /downloads/GREXVAN-GV-KIT-001-public-v1.pdf 301
+/support/kit001/images/主图.pdf /downloads/GREXVAN-GV-KIT-001-public-v1.pdf 301
 /qr/ef001 /support/ef001 301
 /qr/cf001 /support/cf001 301
 /qr/kit001 /support/kit001/ 301

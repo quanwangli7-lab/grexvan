@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "revision": "2026-11-25-phase2b1",
+  "brand": {
+    "name": "GREXVAN",
+    "category": "Automotive Air Care",
+    "system": "Air Care System",
+    "tagline": "Air filtration. Made simple."
+  },
+  "contacts": {
+    "support": "support@grexvan.com",
+    "sales": "sales@grexvan.com"
+  },
+  "applications": [
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "engine": "2.0L gasoline",
+      "year_from": 2013,
+      "year_to": 2019,
+      "induction": "naturally aspirated"
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "engine": "2.5L gasoline",
+      "year_from": 2014,
+      "year_to": 2025,
+      "induction": "naturally aspirated"
+    }
+  ],
+  "exclusions": [
+    "turbocharged models"
+  ],
+  "products": {
+    "GV-KIT-001": {
+      "name": "Cabin & Engine Air Filter Kit",
+      "role": "retail_kit",
+      "asin": "B0HGZ3ZXWM",
+      "amazon_url": "https://www.amazon.com/dp/B0HGZ3ZXWM",
+      "tagline": "Two filters. One maintenance kit.",
+      "components": [
+        {
+          "sku": "GV-CF-001",
+          "quantity": 1
+        },
+        {
+          "sku": "GV-EF-001",
+          "quantity": 1
+        }
+      ],
+      "application_key": "applications",
+      "image": "assets/photos/kit-combination-v1.jpg",
+      "support_path": "support/kit001/",
+      "qr_path": "qr/kit001"
+    },
+    "GV-CF-001": {
+      "name": "Cabin Air Filter",
+      "role": "included_component",
+      "retail_standalone": false,
+      "image": "support/cf001/images/GV-CF-001_main.jpg",
+      "support_path": "support/cf001/",
+      "qr_path": "qr/cf001",
+      "video_id": "50_ivBdLKi0"
+    },
+    "GV-EF-001": {
+      "name": "Engine Air Filter",
+      "role": "included_component",
+      "retail_standalone": false,
+      "image": "support/ef001/images/GV-EF-001_main.jpg",
+      "support_path": "support/ef001/",
+      "qr_path": "qr/ef001",
+      "video_id": "FSXjlKK1vaQ"
+    }
+  },
+  "publication_policy": {
+    "approved_fields_only": true,
+    "no_scope_expansion": true,
+    "no_price_stock_or_performance_claims": true
+  }
+}
